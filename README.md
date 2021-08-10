@@ -9,9 +9,9 @@ by means of a surface finite element approximation described in [the paper "Surf
 
 ## Python code 
 
-This Python code is intended to be used with FEniCS 2019.1 and requires an installation of FEniCS 2019.1 to run. Both a naive sequential solver and a solver using the multiprocessing package are included. For information on FEniCS, please see the [homepage of the project](https://fenicsproject.org/)
+This Python code is intended to be used with FEniCS 2019.1 and requires an installation of FEniCS 2019.1 to run. Both a naive sequential solver and a solver using the multiprocessing package are included. For information on FEniCS, please see the [homepage of the project](https://fenicsproject.org/). 
 
-Note that this code is intended to accompany the above paper and as such may not be updated to future releases of FEniCS. 
+Please note that this code is intended to accompany the above paper and as such may not be updated to future releases of FEniCS. 
 
 ## Example of usage
 
