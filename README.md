@@ -57,11 +57,7 @@ file = File('field.pvd')
 file << sol
 ```
 
-It is also possible to use a multiprocessing-based solver, in which case one writes 
-```python
-no_p = 5
-sol.vector()[:] = solve_problem(Problem,no_p) 
-```
+
 
 
  
