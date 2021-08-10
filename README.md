@@ -15,7 +15,7 @@ Please note that this code is intended to accompany the above paper and as such 
 
 ## Example of usage
 
-For full code, see the file example.py. 
+This is an example which does not use multipool. For an example on how to use multipool, please see the file **`pool_example.py`**.
 
 Begin with the necessary imports. Note that while the mesh in this example is created at instantiation, in principle, meshes can also be user-supplied and as such does not need to be created at runtime. 
 
@@ -56,6 +56,10 @@ sol.vector()[:] = Problem.solve_sequentially()
 file = File('field.pvd')
 file << sol
 ```
+
+
+For full code, see the file example.py. 
+
 
 
 
