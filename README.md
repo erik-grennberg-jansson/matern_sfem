@@ -30,13 +30,13 @@ from field_sfem import problem_const
 ```
 Then decide on parameters. 
 ```python
-L = 25
-beta = 1.98
-kappa = 1.0
-k = 2 
-h = 0.001 
+L = 25 #number of terms in KL-expansion 
+beta = 1.98 #smoothness parameter 
+kappa = 1.0 #length scale parameter
+k = 2  #quadrature step size.
+h = 0.001 #mesh size 
 ```
-If only L is provided, the others will be computed as in the paper. 
+If only L is provided, the others will be configured against L as described in the paper. 
 
 Given the parameters, we can create the random field object and set the random numbers. 
 
