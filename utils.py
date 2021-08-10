@@ -1,11 +1,10 @@
 from dolfin import *
 from numpy import pi,ceil,sin
 
-from multiprocessing import Pool
-
+#from multiprocessing import Pool
+from pathos.multiprocessing import ProcessingPool as Pool
 pc = PETScPreconditioner("icc")
 solver = PETScKrylovSolver("cg",pc)
-
 
                
 def solve_subproblem(j,A,B,b,V,k,kappa,beta):
@@ -24,7 +23,7 @@ def subsolver(args):
     if(prob.rands == []):
         rhs = prob.rhs()
     else:
-        rhs = prob.rhs(prob.rands)
+        rhs = prob.rhs(prob.rands,prob.L)
 
     V = prob.Vuv()[0]
     u = prob.Vuv()[1]
@@ -46,11 +45,13 @@ def subsolver(args):
 
         
 def solve_problem(problem,procs):
+    '''
     if (problem.intbeta>2):
         raise(NotImplementedError('For multipool only beta>2 implemented so far'))
         
-    if(rands == []):
+    if(problem.rands == []):
         raise(ValueError('Set rands before proceeding'))
+    '''
     jobs = []
     sizeSegment = (problem.Kplus+problem.Kmin+1-((problem.Kplus+problem.Kmin+1) % procs))/procs
     for i in range(0, procs):

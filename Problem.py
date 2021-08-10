@@ -19,6 +19,7 @@ class Problem:
         self.Kplus = Kplus
         self.Vuv = Vuv
         self.AB = AB
+        self.L = L 
     def set_rand(self,rands):
         self.rands = rands
     
@@ -52,3 +53,4 @@ class Problem:
             out_vec += exp(2*self.beta*y)*out.vector()[:]
         out_vec *= 2*self.k*sin(pi*self.beta)/pi
         return out_vec 
+
