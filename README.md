@@ -22,7 +22,9 @@ Begin with the necessary imports. Note that while the mesh in this example is cr
 ```python
 import numpy as np 
 from numpy import normal 
+
 from dolfin import *
+
 from mesh_generation import sphere_mesh 
 from utils import solve_problem 
 from Problem import Problem 
