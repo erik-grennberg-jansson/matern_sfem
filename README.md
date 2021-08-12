@@ -17,7 +17,7 @@ Please note that this code is intended to accompany the above paper and as such 
 
 This is an example which does not use multipool. For an example on how to use multipool, please see the file **`pool_example.py`**.
 
-Begin with the necessary imports. Note that while the mesh in this example is created at instantiation, in principle, meshes can also be user-supplied and as such does not need to be created at runtime. 
+Begin with the necessary imports. Note that while the mesh in this example is created at instantiation, but in principle, meshes can also be user-supplied and as such does not need to be created at runtime, even though this will require some minor changes to the code. 
 
 ```python
 import numpy as np 
